@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buscador de cócteles</title>
+
+  <!-- Google Fonts
+      <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    -->
+
+<!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  
+</head>
+
+<body>
+  <header class="header">
+    <h1>Buscador de cócteles</h1>
+    
+  </header>
+  <main class="main">
+
+      <section class="search-form">
+          <form class="form">
+              <input
+              class="input js-input-search"
+              type="text"
+              placeholder="Escribe aquí tu cóctel"
+              />
+              <button class="button-search js-button-search">Buscar</button>
+              <button class="button-reset js-button-reset">Reset</button>
+          </form>
+      </section>
+
+      <section class="search-data">
+          <h2>Lista</h2>
+          <ul class="js-search-list">
+              <li class="js-list-item"></li>
+          </ul>
+      </section>
+
+      <section class="fav-data">
+          <h2>Cócteles Favoritos</h2>
+          <ul class="js-fav-list">
+              <li class="fav-item"></li>
+          </ul>
+      </section>
+
+  </main>
+  <footer class="footer">
+      <small class="copywrite">Todos los derechos reservados &copy; 2023</small>
+  </footer>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
