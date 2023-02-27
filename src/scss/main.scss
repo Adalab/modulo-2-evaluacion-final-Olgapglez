@@ -1,7 +1,21 @@
 @import 'core/variables';
-@import 'core/reset';
 @import 'core/mixins';
 @import 'core/animations';
 @import 'layout/header';
+@import 'layout/main';
 @import 'layout/footer';
 @import 'pages/index';
+
+.favourites {
+
+    background-color: aquamarine;
+    color: blanchedalmond;
+    font-weight: 800;
+    }
+
+
+
+
+    img{
+        width: 50px;
+    }
