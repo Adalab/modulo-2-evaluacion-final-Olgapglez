@@ -7,6 +7,7 @@ const inputSearch = document.querySelector('.js-input-search');
 const ulElement = document.querySelector('.js-search-list');
 const ulFavElement = document.querySelector('.js-fav-list');
 const placeHoldImage = 'https://via.placeholder.com/210x295/ffffff/666666/?text=Sorry%20we%20don%C2%B4t%20have%20a%20picture%20for%20this%20:(';
+const buttonLog = document.querySelector('.js-button-log');
 
 let coctails = [];
 let favCoctails = [];
@@ -21,6 +22,7 @@ function fetchMargaritas() {
         id: drinks.idDrink,
         name: drinks.strDrink,
         image: drinks.strDrinkThumb,
+        instructions: drinks.strInstructions,
       }));
       renderCoctails();
     });
@@ -46,6 +48,7 @@ function renderCoctails() {
     <li class="js-list-item" id="${oneDrink.id}">
     <img src= "${oneDrink.image ? oneDrink.image : placeHoldImage}" alt= "${oneDrink.name}"/>
     ${oneDrink.name}
+    <p>${oneDrink.instructions}</p>
     </li>`;
 
   }
@@ -59,6 +62,7 @@ function renderFavList() {
     <li class="js-list-item" id="${oneDrink.id}">
     <img src= "${oneDrink.image ? oneDrink.image : placeHoldImage}" alt= "${oneDrink.name}"/>
     ${oneDrink.name}
+    <p>${oneDrink.instructions}</p>
     </li>`;
   }
 }
@@ -82,6 +86,7 @@ function handleClickSearch(event) {
           id: drinks.idDrink,
           name: drinks.strDrink,
           image: drinks.strDrinkThumb,
+          instructions: drinks.strInstructions,
         }));
         renderCoctails();
       });
@@ -124,10 +129,20 @@ if (FavCoctailsStored) {
   renderFavList();
 }
 
+function handleLog (ev) {
+  ev.preventDefault();
+for (const oneDrink of coctails) {
+  
+console.log(oneDrink.name)
+
+}
+
+}
+
 
 //EVENTOS
 buttonSearch.addEventListener('click', handleClickSearch);
-
+buttonLog.addEventListener('click', handleLog);
 
 
 //LLAMADAS DE FUNCIONES
